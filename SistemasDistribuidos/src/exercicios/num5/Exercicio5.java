@@ -1,5 +1,10 @@
 package exercicios.num5;
 
+//Seguindo a aplicação anterior, adicione a opção para o usuário poder configurar alarmes (definidos por
+//um horário) para cada relógio. Quando chegar no horário do alarme, um alerta (JOptionPane) é
+//disparado.
+
+
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;

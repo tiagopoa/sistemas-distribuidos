@@ -1,5 +1,9 @@
 package exercicios.num4;
 
+//Crie uma aplicação que apresenta numa tela 3 relógios digitais, que mostre inclusive os segundos.
+//Cada relógio inicia com 0 e a cada segundo se atualiza.
+
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
