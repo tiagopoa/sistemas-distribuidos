@@ -6,35 +6,22 @@ public class Tartaruga implements Runnable {
 	
 	Random gerador = new Random();
 
-<<<<<<< HEAD
+
 	private int velocidadeTartaruga = gerador.nextInt(51);
 	private int distanciaCorrida;
 
-	public Tartaruga(int distanciaCorrida) {
-		// TODO Auto-generated constructor stub
-		this.velocidadeTartaruga = velocidadeTartaruga;
-		this.distanciaCorrida = distanciaCorrida * 100;
-=======
-	private int velocidade;
-	private int[] array;
-	private int faltaPercorrer;
-
 	public Tartaruga(int[] array) {
 		// TODO Auto-generated constructor stub
-		this.velocidade = gerador.nextInt(10);
-		this.array = new int[array.length];
-		
-		System.out.println("Ficha Técnica TARTARUGA:");
-		System.out.println("Velocidade: " + velocidade + " centimetros por segundo!");
-		
->>>>>>> c41522105e7bb0eff58d90986c5c21189d080bbe
+		this.velocidadeTartaruga = velocidadeTartaruga;
+		this.distanciaCorrida = array.length;
+
 	}
 
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		
-<<<<<<< HEAD
+
 		if (velocidadeTartaruga == 0) {
 			velocidadeTartaruga = 1;
 		}
@@ -52,7 +39,7 @@ public class Tartaruga implements Runnable {
 		//System.out.println("Tartaruga: Falta percorrer " + distanciaCorrida);
 		
 		try {
-			Thread.sleep(100);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -66,31 +53,7 @@ public class Tartaruga implements Runnable {
 			break;
 		} else {
 		System.out.println("\nTartaruga: Faltam " + falta + " centímetros para a linha de chegada\n");
-=======
-		faltaPercorrer = array.length;
-		
-		//System.out.println("Passou array de " + faltaPercorrer + "\nE a velocidade é " + velocidade);
-		
-		for (int i = 1; i <= array.length; i++ ) {			
-		
-		faltaPercorrer = faltaPercorrer - velocidade;
-		
-		if (faltaPercorrer > 0) {
-			
-		System.out.println("\nTartaruga: Falta percorrer " + faltaPercorrer + " centimetros");
-		
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-	}
-		
-		} else {
-			System.out.println("\nE a Tartaruga cruzou a linha de chegada ! ! !");
-			break;
-		} 
->>>>>>> c41522105e7bb0eff58d90986c5c21189d080bbe
+
 		}
 
 	}

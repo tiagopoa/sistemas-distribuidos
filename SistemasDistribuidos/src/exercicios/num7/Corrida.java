@@ -22,14 +22,11 @@ public class Corrida {
 		
 		System.out.println("Corrida entre Lebre e Tartaruga\nQuantos metros será a corrida?");
 		int distanciaCorrida = scan.nextInt();
-<<<<<<< HEAD
-				
-		
-=======
+
 		scan.close();
 		
 		int[] array = new int[distanciaCorrida*100];
->>>>>>> c41522105e7bb0eff58d90986c5c21189d080bbe
+
 		
 		System.out.println("A corrida terá um total de " + array.length + " centimetros");
 		try {
@@ -46,16 +43,7 @@ public class Corrida {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 	}
-		
-<<<<<<< HEAD
-		//System.out.println(velocidadeLebre+"\n"+velocidadeTartaruga);
-		
-		
-			Thread lebre = new Thread(new Lebre(distanciaCorrida));
-			lebre.start();
-			
-			Thread tartaruga = new Thread(new Tartaruga(distanciaCorrida));
-=======
+
 		System.out.println("\nELAS PARTIRAM ! ! !\n");
 		
 		
@@ -63,7 +51,6 @@ public class Corrida {
 			lebre.start();
 			
 			Thread tartaruga = new Thread(new Tartaruga(array));
->>>>>>> c41522105e7bb0eff58d90986c5c21189d080bbe
 			tartaruga.start();
 			
 			
