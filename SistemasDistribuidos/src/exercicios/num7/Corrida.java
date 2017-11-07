@@ -19,25 +19,23 @@ public class Corrida {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Random gerador = new Random();
+		
 		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Corrida entre Lebre e Tartaruga\nQuantos metros será a corrida?");
 		int distanciaCorrida = scan.nextInt();
 				
-		int velocidadeLebre = gerador.nextInt(51);
-		int quantidadeCochilosPorCorrida = gerador.nextInt(11);
-		int tempoCochilo = gerador.nextInt(21);
-		int velocidadeTartaruga = gerador.nextInt(51);
-		
-		System.out.println(velocidadeLebre+"\n"+velocidadeTartaruga);
 		
 		
-			Thread lebre = new Thread(new Lebre(velocidadeLebre,quantidadeCochilosPorCorrida,tempoCochilo,distanciaCorrida));
+		
+		//System.out.println(velocidadeLebre+"\n"+velocidadeTartaruga);
+		
+		
+			Thread lebre = new Thread(new Lebre(distanciaCorrida));
 			lebre.start();
 			
-			Thread tartaruga = new Thread(new Tartaruga(velocidadeTartaruga,distanciaCorrida));
+			Thread tartaruga = new Thread(new Tartaruga(distanciaCorrida));
 			tartaruga.start();
 		
 
