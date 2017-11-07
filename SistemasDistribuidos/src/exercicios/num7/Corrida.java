@@ -1,9 +1,6 @@
 package exercicios.num7;
 
-import java.util.Random;
 import java.util.Scanner;
-
-import exercicios.num3.MyRunnable;
 
 //7. Implemente uma corrida entre lebres e tartarugas:
 //a. Cada animal deve ser uma Thread;
@@ -19,26 +16,42 @@ public class Corrida {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Random gerador = new Random();
+		
 		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Corrida entre Lebre e Tartaruga\nQuantos metros será a corrida?");
 		int distanciaCorrida = scan.nextInt();
-				
-		int velocidadeLebre = gerador.nextInt(51);
-		int quantidadeCochilosPorCorrida = gerador.nextInt(11);
-		int tempoCochilo = gerador.nextInt(21);
-		int velocidadeTartaruga = gerador.nextInt(51);
+		scan.close();
 		
-		System.out.println(velocidadeLebre+"\n"+velocidadeTartaruga);
+		int[] array = new int[distanciaCorrida*100];
+		
+		System.out.println("A corrida terá um total de " + array.length + " centimetros");
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+	}
+		System.out.println("\nFOI DADA A LARGADA ! ! !");
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+	}
+		
+		System.out.println("\nELAS PARTIRAM ! ! !\n");
 		
 		
-			Thread lebre = new Thread(new Lebre(velocidadeLebre,quantidadeCochilosPorCorrida,tempoCochilo,distanciaCorrida));
+			Thread lebre = new Thread(new Lebre(array));
 			lebre.start();
 			
-			Thread tartaruga = new Thread(new Tartaruga(velocidadeTartaruga,distanciaCorrida));
+			Thread tartaruga = new Thread(new Tartaruga(array));
 			tartaruga.start();
+			
+			
 		
 
 	}

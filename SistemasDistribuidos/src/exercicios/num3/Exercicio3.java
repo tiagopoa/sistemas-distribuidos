@@ -16,7 +16,7 @@ public class Exercicio3 {
 		Scanner scan = new Scanner(System.in);
 		int numThreads = 0;		
 
-		int[] array = new int[20000];
+		int[] array = new int[200];
 		Random r = new Random(); //instância um objeto da classe Random usando o construtor padrão
 		for (int i = 0; i < array.length; i++) {
 		   array[i] = r.nextInt(50);
