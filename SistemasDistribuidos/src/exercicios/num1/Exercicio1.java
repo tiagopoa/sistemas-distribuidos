@@ -10,11 +10,13 @@ public class Exercicio1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		   Thread thread = new Thread(new Thread1());
-		   thread.start();
+		   	for (int i = 1; i <= 2; i++) {
+			Thread thread = new Thread(new Thread1(i));
+			thread.start();
+		   	}
 		
-		   Thread thread2 = new Thread(new Thread2());
-		   thread2.start();
+			/*Thread thread2 = new Thread(new Thread2());
+			thread2.start();*/
 		
 		
 
