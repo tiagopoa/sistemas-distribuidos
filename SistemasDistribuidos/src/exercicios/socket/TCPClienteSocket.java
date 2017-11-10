@@ -29,6 +29,14 @@ public class TCPClienteSocket {
             System.out.println("Mensagem recebida: "+mensagem);
             JOptionPane.showMessageDialog(null, mensagem);
             
+            String valor = JOptionPane.showInputDialog("Valor: ");
+            dos.writeUTF(valor);
+            System.out.println("Enviando "+valor);
+            
+            String mensagem1 = dis.readUTF();
+            System.out.println("Mensagem recebida: "+mensagem1);
+            JOptionPane.showMessageDialog(null, mensagem1);
+            
             
         } catch (IOException ex) {
             Logger.getLogger(TCPClienteSocket.class.getName()).log(Level.SEVERE, null, ex);

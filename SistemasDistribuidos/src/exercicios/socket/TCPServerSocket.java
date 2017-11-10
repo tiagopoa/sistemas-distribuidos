@@ -32,6 +32,14 @@ public class TCPServerSocket {
             dos.writeUTF(hello);            
             System.out.println("Enviado "+hello);
             
+            String valor = dis.readUTF();
+            System.out.println("Recebido "+valor);
+            int concat = Integer.parseInt(valor) + 100;
+            dos.writeUTF(String.valueOf(concat));            
+            System.out.println("Enviado "+concat);
+            
+            
+            
         } catch (IOException ex) {
             Logger.getLogger(TCPServerSocket.class.getName()).log(Level.SEVERE, null, ex);
         } finally{
